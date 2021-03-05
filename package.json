@@ -2,7 +2,7 @@
   "name": "DJS-Template",
   "version": "1.0.0",
   "description": "Good template for developing your discord bot :p",
-  "main": "src/index.js",
+  "main": "src/bot.js",
   "scripts": {
   "run": "node ."
   },
