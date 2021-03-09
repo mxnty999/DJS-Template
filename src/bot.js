@@ -8,8 +8,17 @@ const client = new Client({
 });
 
 client.on('ready', () => {
-  client.user.setActivity('Yes', { type: 'WATCHING' }) //types watching,playing,listening i forgot the rest ;-;
-})
+const statuses = [
+  `You can change these in bot.js`,
+  `hello`,
+  `how is your day`,
+  `yes`,
+  `thank you for using my template`
+];
+
+let i = 0;
+ setInterval(() =>  client.user.setActivity(`${statuses[i++ % statuses.length]}`, { type: 'WATCHING'}), 15000);
+ })
 
 const cooldowns = new Set();
 client.commands = new Collection();
